@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -21,3 +22,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "LaftelClone"
 include(":app")
+include(":feature:home")
+include(":feature:tagsearch")
+include(":feature:box")
+include(":feature:my")
