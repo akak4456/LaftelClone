@@ -8,7 +8,7 @@ import androidx.compose.ui.tooling.preview.Preview
 @Composable
 internal fun HomeScreen(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello 헬로우 $name!",
+        text = "Home 헬로우 $name!",
         modifier = modifier
     )
 }
