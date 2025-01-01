@@ -1,6 +1,7 @@
 package com.jo.module.convention
 
 import com.android.build.api.dsl.CommonExtension
+import com.android.build.api.dsl.LibraryExtension
 import com.android.build.gradle.internal.utils.configureKotlinCompileForProject
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
@@ -27,6 +28,8 @@ internal fun Project.configureAndroidCompose(
 
         defaultConfig {
             minSdk = 24
+
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
         composeOptions {
@@ -40,6 +43,22 @@ internal fun Project.configureAndroidCompose(
 
     }
 
+    (commonExtension as? LibraryExtension)?.apply {
+        defaultConfig {
+            consumerProguardFiles("consumer-rules.pro")
+        }
+
+        buildTypes {
+            release {
+                isMinifyEnabled = false
+                proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+                )
+            }
+        }
+    }
+
     configure<KotlinAndroidProjectExtension> {
         compilerOptions.jvmTarget.set(JvmTarget.JVM_17)
     }
@@ -48,6 +67,14 @@ internal fun Project.configureAndroidCompose(
         // Disabling to work with Alpha
         "api"(platform(libs.findLibrary("androidx-compose-bom").get()))
         "implementation"(libs.findBundle("compose").get())
+        "implementation"(libs.findLibrary("androidx-core-ktx").get())
+        "implementation"(libs.findLibrary("androidx-appcompat").get())
+        "implementation"(libs.findLibrary("material").get())
+
         "debugImplementation"(libs.findBundle("compose.debug").get())
+
+        "testImplementation"(libs.findLibrary("junit").get())
+        "androidTestImplementation"(libs.findLibrary("androidx-junit").get())
+        "androidTestImplementation"(libs.findLibrary("androidx-espresso-core").get())
     }
 }

@@ -1,6 +1,5 @@
 plugins {
     id("jo.plugin.feature")
-    id("org.jetbrains.kotlin.android")
 }
 
 android {
