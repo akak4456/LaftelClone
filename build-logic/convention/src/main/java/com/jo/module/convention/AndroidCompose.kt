@@ -65,9 +65,10 @@ internal fun Project.configureAndroidCompose(
 
     dependencies {
         // Disabling to work with Alpha
+        "implementation"(libs.findLibrary("androidx-core-ktx").get())
+        "implementation"(libs.findLibrary("androidx-lifecycle-runtime-ktx").get())
         "api"(platform(libs.findLibrary("androidx-compose-bom").get()))
         "implementation"(libs.findBundle("compose").get())
-        "implementation"(libs.findLibrary("androidx-core-ktx").get())
         "implementation"(libs.findLibrary("androidx-appcompat").get())
         "implementation"(libs.findLibrary("material").get())
 
