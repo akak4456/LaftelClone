@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
             LaftelCloneTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
+                        name = "안드로이드짱",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

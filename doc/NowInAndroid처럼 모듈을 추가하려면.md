@@ -1,4 +1,7 @@
 # NowInAndroid 처럼 모듈을 추가하려면
+## build-logic 구성
+https://dev-inventory.com/57
+을 참고할 것
 
 ## Android Studio에서 모듈 추가
 1. File > New > New Module 선택.
