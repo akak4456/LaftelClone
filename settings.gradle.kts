@@ -29,3 +29,5 @@ gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:t
 
 include(":feature:home")
 include(":core:database")
+include(":feature:splash")
+include(":core:designsystem")

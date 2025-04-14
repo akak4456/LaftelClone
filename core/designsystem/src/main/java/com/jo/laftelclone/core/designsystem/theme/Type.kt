@@ -1,4 +1,4 @@
-package com.jo.laftelclone.ui.theme
+package com.jo.laftelclone.core.designsystem.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -13,5 +13,6 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:designsystem"))
     implementation(project(":feature:home"))
 }

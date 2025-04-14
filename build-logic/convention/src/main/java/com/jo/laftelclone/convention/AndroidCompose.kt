@@ -78,6 +78,7 @@ internal fun Project.configureAndroidCompose(
         "testImplementation"(libs.findLibrary("mockito").get())
         "testImplementation"(libs.findLibrary("mockito-kotlin").get())
         "testImplementation"(libs.findLibrary("coroutines-test").get())
+        "androidTestImplementation"(libs.findLibrary("androidx-junit-compose").get())
         "androidTestImplementation"(libs.findLibrary("androidx-junit").get())
         "androidTestImplementation"(libs.findLibrary("androidx-espresso-core").get())
     }

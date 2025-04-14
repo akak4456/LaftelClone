@@ -24,6 +24,7 @@ mockitoKotlin = "5.2.0"
 coroutinesTest = "1.7.3"
 hilt = "2.51.1"
 androidxHiltNavigationCompose = "1.2.0"
+uiTestJUnit4Android = "1.7.1"
 
 [libraries]
 # AndroidX Core
@@ -75,6 +76,7 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
 mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockitoKotlin" }
 coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+androidx-junit-compose = { group = "androidx.compose.ui", name="ui-test-junit4-android", version.ref = "uiTestJUnit4Android" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
