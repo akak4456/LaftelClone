@@ -10,9 +10,11 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.apply("com.android.library")
-            pluginManager.apply("org.jetbrains.kotlin.android")
-            pluginManager.apply("org.jetbrains.kotlin.plugin.compose")
+            with(pluginManager) {
+                apply("com.android.library")
+                apply("org.jetbrains.kotlin.android")
+                apply("org.jetbrains.kotlin.plugin.compose")
+            }
             val extension = extensions.getByType<LibraryExtension>()
             configureAndroidCompose(extension)
         }

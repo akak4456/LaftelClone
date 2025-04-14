@@ -71,6 +71,7 @@ internal fun Project.configureAndroidCompose(
         "implementation"(libs.findBundle("compose").get())
         "implementation"(libs.findLibrary("androidx-appcompat").get())
         "implementation"(libs.findLibrary("material").get())
+        "implementation"(libs.findLibrary("androidx-junit-compose").get())
 
         "debugImplementation"(libs.findBundle("compose.debug").get())
 
@@ -78,7 +79,6 @@ internal fun Project.configureAndroidCompose(
         "testImplementation"(libs.findLibrary("mockito").get())
         "testImplementation"(libs.findLibrary("mockito-kotlin").get())
         "testImplementation"(libs.findLibrary("coroutines-test").get())
-        "androidTestImplementation"(libs.findLibrary("androidx-junit-compose").get())
         "androidTestImplementation"(libs.findLibrary("androidx-junit").get())
         "androidTestImplementation"(libs.findLibrary("androidx-espresso-core").get())
     }

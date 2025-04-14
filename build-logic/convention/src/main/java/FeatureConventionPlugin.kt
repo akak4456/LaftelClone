@@ -1,5 +1,7 @@
 @file:Suppress("unused")
 
+import com.android.build.api.dsl.CommonExtension
+import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
@@ -17,15 +19,22 @@ internal class FeatureConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("jo.plugin.android.library.compose")
                 apply("org.jetbrains.kotlin.plugin.compose")
+                apply("io.github.takahirom.roborazzi")
             }
-
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+            val extension = extensions.getByType<LibraryExtension>()
+            (extension as CommonExtension<*, *, *, *>).apply {
+                testOptions {
+                    unitTests {
+                        isIncludeAndroidResources = true
+                    }
+                }
+            }
             dependencies {
-
-                "implementation"(libs.findLibrary("androidx.appcompat").get())
-                "implementation"(libs.findLibrary("androidx.core.ktx").get())
-
-                "implementation"(libs.findLibrary("androidx.lifecycle.runtime.ktx").get())
+                "testImplementation"(libs.findLibrary("roborazzi").get())
+                "testImplementation"(libs.findLibrary("roborazzi-compose").get())
+                "testImplementation"(libs.findLibrary("roborazzi-accessibility-check").get())
+                "testImplementation"(libs.findLibrary("robolectric").get())
             }
         }
     }
