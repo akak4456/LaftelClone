@@ -11,7 +11,7 @@
       <SelectionState runConfigName="logoImage_exist()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="splashScreenPopulated()">
+      <SelectionState runConfigName="bottomNavigationItems_areDisplayed()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

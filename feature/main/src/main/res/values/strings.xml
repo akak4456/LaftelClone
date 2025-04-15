@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_home_title">홈</string>
+    <string name="main_tagsearch_title">태그검색</string>
+    <string name="main_storage_title">보관함</string>
+</resources>

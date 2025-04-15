@@ -32,7 +32,10 @@
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/home" />
             <option value="$PROJECT_DIR$/feature/main" />
+            <option value="$PROJECT_DIR$/feature/my" />
             <option value="$PROJECT_DIR$/feature/splash" />
+            <option value="$PROJECT_DIR$/feature/storage" />
+            <option value="$PROJECT_DIR$/feature/tagsearch" />
           </set>
         </option>
       </GradleProjectSettings>
