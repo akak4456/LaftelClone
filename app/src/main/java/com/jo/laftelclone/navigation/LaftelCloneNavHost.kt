@@ -3,6 +3,8 @@ package com.jo.laftelclone.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
+import com.jo.laftelclone.feature.main.navigation.mainSection
+import com.jo.laftelclone.feature.main.navigation.navigateToMain
 import com.jo.laftelclone.feature.splash.navigation.SplashRoute
 import com.jo.laftelclone.feature.splash.navigation.splashSection
 import com.jo.laftelclone.ui.LaftelCloneAppState
@@ -15,7 +17,8 @@ fun LaftelCloneNavHost(
     val navController = appState.navController
     NavHost(navController = appState.navController, startDestination = SplashRoute) {
         splashSection(goToMain = {
-            
+            navController.navigateToMain()
         })
+        mainSection()
     }
 }

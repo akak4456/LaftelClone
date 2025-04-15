@@ -9,6 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,9 +20,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.jo.laftelclone.core.designsystem.theme.LaftelCloneTheme
+import kotlinx.coroutines.delay
 
 @Composable
 internal fun SplashScreen(goToMain: () -> Unit) {
+    LaunchedEffect(Unit) {
+        /*
+        현재는 3초간 splash 화면을 보여주고 main 화면으로 이동하는 것으로 구현함
+        TODO 나중에 스플래시 화면에서 앱 시작에 필요한 초기화 설정 하기
+         */
+        delay(3000)
+        goToMain()
+    }
     SplashScreen()
 }
 
