@@ -42,6 +42,9 @@ class MainScreenTest {
         // "보관함" 탭 클릭
         composeTestRule.onNodeWithTag("STORAGE").performClick()
 
+        // "태그 서치" 탭 클릭
+        composeTestRule.onNodeWithTag("STORAGE").performClick()
+
         // 이 예시에서는 실제 보관함 화면의 특정 텍스트나 컴포넌트를 확인하면 좋습니다
         // 예: composeTestRule.onNodeWithText("내 찜 목록").assertIsDisplayed()
     }
