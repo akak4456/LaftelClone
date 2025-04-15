@@ -72,6 +72,7 @@ internal fun Project.configureAndroidCompose(
         "implementation"(libs.findLibrary("androidx-appcompat").get())
         "implementation"(libs.findLibrary("material").get())
         "implementation"(libs.findLibrary("androidx-junit-compose").get())
+        "implementation"(libs.findLibrary("kotlinx-serialization-json").get())
 
         "debugImplementation"(libs.findBundle("compose.debug").get())
 

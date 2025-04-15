@@ -8,4 +8,5 @@ plugins {
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.roborazzi) apply false
+    alias(libs.plugins.kotlin.serialization) apply false
 }

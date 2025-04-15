@@ -17,7 +17,13 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.jo.laftelclone.core.designsystem.theme.LaftelCloneTheme
+
+@Composable
+internal fun SplashScreen(goToMain: () -> Unit) {
+    SplashScreen()
+}
 
 @Composable
 internal fun SplashScreen() {
