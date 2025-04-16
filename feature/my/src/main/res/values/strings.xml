@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_my_logoff_login_join">로그인·가입</string>
+    <string name="feature_my_logoff_welcome">라프텔에 오신 것을 환영합니다</string>
+    <string name="feature_my_logoff_membership">라프텔 멤버십</string>
+    <string name="feature_my_logoff_setting">설정</string>
+    <string name="feature_my_logoff_customer_center">고객센터</string>
+</resources>

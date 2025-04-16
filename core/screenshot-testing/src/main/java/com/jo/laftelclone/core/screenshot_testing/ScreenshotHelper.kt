@@ -31,7 +31,7 @@ val DefaultRoborazziOptions =
 enum class DefaultTestDevices(val description: String, val spec: String) {
     PHONE("phone", "spec:shape=Normal,width=360,height=640,unit=dp,dpi=480"),
     FOLDABLE("foldable", "spec:shape=Normal,width=673,height=841,unit=dp,dpi=480"),
-    TABLET("tablet", "spec:shape=Normal,width=1280,height=800,unit=dp,dpi=480"),
+    TABLET("tablet", "spec:shape=Normal,width=800,height=1280,unit=dp,dpi=480"),
 }
 fun <A : ComponentActivity> AndroidComposeTestRule<ActivityScenarioRule<A>, A>.captureMultiDevice(
     screenshotName: String,

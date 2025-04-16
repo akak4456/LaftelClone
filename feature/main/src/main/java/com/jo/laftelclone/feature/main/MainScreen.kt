@@ -51,7 +51,13 @@ internal fun MainScreen() {
         NavHost(
             navController = navController,
             startDestination = HomeRoute,
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier.
+            padding(
+                top = 0.dp,
+                start = 0.dp,
+                end = 0.dp,
+                bottom = innerPadding.calculateBottomPadding()
+            )
         ) {
             homeSection()
             tagSearchSection()
