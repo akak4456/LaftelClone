@@ -1,6 +1,5 @@
 package com.jo.laftelclone.feature.main
 
-import android.util.Log
 import androidx.compose.foundation.interaction.Interaction
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.padding
@@ -13,7 +12,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
@@ -75,12 +73,16 @@ fun BottomBar(navController: NavHostController) {
                 icon = {
                     Icon(
                         painter = painterResource(
-                            id = if (destination.isMy) {
+                            id = if (selected) {
                                 // TODO 적절한 my icon 설정하기
-                                R.drawable.ic_my_empty
-                            } else {
-                                if (selected) {
+                                if (destination.isMy) {
+                                    R.drawable.ic_my_empty_on
+                                } else {
                                     destination.selectedIcon
+                                }
+                            } else {
+                                if (destination.isMy) {
+                                    R.drawable.ic_my_empty_off
                                 } else {
                                     destination.unselectedIcon
                                 }
@@ -125,7 +127,10 @@ fun BottomBar(navController: NavHostController) {
     }
 }
 
-private fun navigateToTopLevelDestination(navController: NavHostController, topLevelDestination: TopLevelDestination) {
+private fun navigateToTopLevelDestination(
+    navController: NavHostController,
+    topLevelDestination: TopLevelDestination
+) {
     val topLevelNavOptions = navOptions {
         // Pop up to the start destination of the graph to
         // avoid building up a large stack of destinations
