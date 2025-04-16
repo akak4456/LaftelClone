@@ -101,7 +101,7 @@ fun BottomBar(navController: NavHostController) {
                         text =
                             if (destination.isMy) {
                                 // TODO 적절한 my text 설정하기
-                                "akak4456"
+                                "MY"
                             } else {
                                 stringResource(id = destination.titleTextId)
                             }
