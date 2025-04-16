@@ -30,6 +30,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.jo.laftelclone.core.designsystem.component.LocalClickHandlers
 import com.jo.laftelclone.core.designsystem.theme.LightGrey
 
 /**
@@ -62,13 +63,16 @@ internal fun MyLogOffScreen() {
 
 @Composable
 private fun UserInfoSection() {
+    val handlers = LocalClickHandlers.current
     Row(
         modifier = Modifier
             .background(Color.White)
             .fillMaxWidth()
             .statusBarsPadding()
-            .padding(top = 60.dp, bottom = 60.dp, start = 20.dp, end = 20.dp)
-            .clickable { /* TODO */ },
+            .clickable {
+                handlers.onNavigateToLogin()
+            }
+            .padding(top = 60.dp, bottom = 60.dp, start = 20.dp, end = 20.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {

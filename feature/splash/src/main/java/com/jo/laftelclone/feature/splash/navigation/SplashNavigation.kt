@@ -12,8 +12,8 @@ import kotlinx.serialization.Serializable
 
 fun NavController.navigateToSplash(navOptions: NavOptions? = null) = navigate(route = SplashRoute, navOptions)
 
-fun NavGraphBuilder.splashSection(goToMain: () -> Unit) {
+fun NavGraphBuilder.splashSection() {
     composable<SplashRoute> {
-        SplashScreen(goToMain)
+        SplashScreen()
     }
 }
