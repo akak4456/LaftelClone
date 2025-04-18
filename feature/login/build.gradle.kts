@@ -1,5 +1,5 @@
 plugins {
-    id("jo.plugin.feature")
+    alias(libs.plugins.jo.feature)
 }
 
 android {
@@ -7,6 +7,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:designsystem"))
-    testImplementation(project(":core:screenshot-testing"))
+    implementation(projects.core.designsystem)
+    testImplementation(projects.core.screenshotTesting)
 }

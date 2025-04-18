@@ -1,5 +1,5 @@
 plugins {
-    id("jo.plugin.android.library.compose")
+    alias(libs.plugins.jo.android.library.compose)
 }
 
 android {
@@ -12,5 +12,5 @@ dependencies {
     implementation(libs.roborazzi.accessibility.check)
     implementation(libs.robolectric)
 
-    implementation(project(":core:designsystem"))
+    implementation(projects.core.designsystem)
 }

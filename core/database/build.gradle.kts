@@ -1,7 +1,7 @@
 plugins {
-    id("jo.plugin.android.library.compose")
-    id("jo.plugin.hilt")
-    id("jo.plugin.room")
+    alias(libs.plugins.jo.android.library.compose)
+    alias(libs.plugins.jo.hilt)
+    alias(libs.plugins.jo.room)
 }
 
 android {

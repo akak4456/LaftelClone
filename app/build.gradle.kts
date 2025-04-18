@@ -1,6 +1,6 @@
 plugins {
-    id("jo.plugin.application.compose")
-    id("jo.plugin.hilt")
+    alias(libs.plugins.jo.application.compose)
+    alias(libs.plugins.jo.hilt)
 }
 
 android {
@@ -13,8 +13,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:designsystem"))
-    implementation(project(":feature:splash"))
-    implementation(project(":feature:main"))
-    implementation(project(":feature:login"))
+    implementation(projects.core.designsystem)
+    implementation(projects.feature.splash)
+    implementation(projects.feature.main)
+    implementation(projects.feature.login)
 }

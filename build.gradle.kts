@@ -9,4 +9,10 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.roborazzi) apply false
     alias(libs.plugins.kotlin.serialization) apply false
+    // Plugins for Project
+    alias(libs.plugins.jo.application.compose) apply false
+    alias(libs.plugins.jo.android.library.compose) apply false
+    alias(libs.plugins.jo.feature) apply false
+    alias(libs.plugins.jo.hilt) apply false
+    alias(libs.plugins.jo.room) apply false
 }

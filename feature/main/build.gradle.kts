@@ -1,6 +1,6 @@
 plugins {
-    id("jo.plugin.feature")
-    id("jo.plugin.hilt")
+    alias(libs.plugins.jo.feature)
+    alias(libs.plugins.jo.hilt)
 }
 
 android {
@@ -8,12 +8,12 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:designsystem"))
+    implementation(projects.core.designsystem)
 
-    implementation(project(":feature:home"))
-    implementation(project(":feature:tagsearch"))
-    implementation(project(":feature:storage"))
-    implementation(project(":feature:my"))
+    implementation(projects.feature.home)
+    implementation(projects.feature.tagsearch)
+    implementation(projects.feature.storage)
+    implementation(projects.feature.my)
 
-    testImplementation(project(":core:screenshot-testing"))
+    testImplementation(projects.core.screenshotTesting)
 }

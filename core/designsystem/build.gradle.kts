@@ -1,5 +1,5 @@
 plugins {
-    id("jo.plugin.android.library.compose")
+    alias(libs.plugins.jo.android.library.compose)
 }
 
 android {
