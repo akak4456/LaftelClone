@@ -11,3 +11,6 @@
 
 ## 왜 jetpack compose 를 선택했나?
 [jetpackcompose선택이요](./doc/jetpackcompose선택이유.md)
+
+## jetpack compose 에서 화면 이동 처리는?
+[화면이동처리](./doc/화면이동처리.md)
