@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.jo.laftelclone.core.designsystem.component.PreloadGif
 import com.jo.laftelclone.core.designsystem.theme.LaftelCloneTheme
 import com.jo.laftelclone.ui.LaftelCloneApp
 import com.jo.laftelclone.ui.rememberLaftelCloneAppState
@@ -19,6 +20,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        PreloadGif.preloadGif(this)
         setContent {
             val appState = rememberLaftelCloneAppState(
 

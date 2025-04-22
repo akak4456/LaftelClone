@@ -28,6 +28,7 @@ uiTestJUnit4Android = "1.7.1"
 robolectric = "4.14.1"
 roborazzi = "1.39.0"
 kotlinxSerializationJson = "1.8.0"
+skydoves-glide = "1.4.7"
 
 [libraries]
 # AndroidX Core
@@ -74,6 +75,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 # Coil
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 
+# Skydoves-Glide
+skydoves-glide = { group = "com.github.skydoves", name = "landscapist-glide", version.ref = "skydoves-glide" }
+
 # Testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -106,6 +110,6 @@ jo-hilt = { id = "jo.plugin.hilt", version = "unspecified" }
 jo-room = { id = "jo.plugin.room", version = "unspecified" }
 
 [bundles]
-compose = ["androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling-preview", "androidx-material3", "coil-compose", "ui-foundation", "androidx-activity-compose", "lifecycle-compose", "navigation-compose"]
+compose = ["androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling-preview", "androidx-material3", "coil-compose", "skydoves-glide", "ui-foundation", "androidx-activity-compose", "lifecycle-compose", "navigation-compose"]
 compose-debug = ["androidx-ui-tooling", "androidx-ui-test-manifest" ]
 

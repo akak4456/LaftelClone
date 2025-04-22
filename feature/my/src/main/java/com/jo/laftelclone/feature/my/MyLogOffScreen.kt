@@ -21,6 +21,11 @@ import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -64,13 +69,22 @@ internal fun MyLogOffScreen() {
 @Composable
 private fun UserInfoSection() {
     val handlers = LocalClickHandlers.current
+    var isGoToLoginClicked by remember { mutableStateOf(false) }
+    LaunchedEffect(isGoToLoginClicked) {
+        if(isGoToLoginClicked) {
+            handlers.onNavigateToLogin()
+        }
+    }
     Row(
         modifier = Modifier
             .background(Color.White)
             .fillMaxWidth()
             .statusBarsPadding()
-            .clickable {
-                handlers.onNavigateToLogin()
+            .clickable(enabled = !isGoToLoginClicked) {
+                if(!isGoToLoginClicked) {
+                    isGoToLoginClicked = true
+                }
+
             }
             .padding(top = 60.dp, bottom = 60.dp, start = 20.dp, end = 20.dp),
         verticalAlignment = Alignment.CenterVertically,
