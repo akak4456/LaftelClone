@@ -3,8 +3,11 @@
 
 ## 안드로이드 모듈 설계
 
-[문서참조](./doc/안드로이드모듈설계.md)
+[안드로이드모듈설계](./doc/안드로이드모듈설계.md)
 [NowInAndroid와같이모듈추가하는방법](./doc/NowInAndroid처럼%20모듈을%20추가하려면.md)
 
 ## Roborazzi 테스트 요령
 [Roborazzi테스트요령](./doc/Roborazzi테스트요령.md)
+
+## 왜 jetpack compose 를 선택했나?
+[jetpackcompose선택이요](./doc/jetpackcompose선택이유.md)
