@@ -40,11 +40,13 @@ fun LaftelCloneNavHost(
                 popUpTo(SplashRoute) {
                     inclusive = true // Splash 화면도 같이 스택에서 제거
                 }
-                launchSingleTop = true // 중복 방지 (선택)
+                launchSingleTop = true
             })
         },
         onNavigateToLogin = {
-            navController.navigateToLogin()
+            navController.navigateToLogin(navOptions {
+                launchSingleTop = true // 중복 클릭 방지
+            })
         }
     )
     val animDuration = 700

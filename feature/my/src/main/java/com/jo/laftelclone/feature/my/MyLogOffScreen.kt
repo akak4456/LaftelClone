@@ -69,22 +69,13 @@ internal fun MyLogOffScreen() {
 @Composable
 private fun UserInfoSection() {
     val handlers = LocalClickHandlers.current
-    var isGoToLoginClicked by remember { mutableStateOf(false) }
-    LaunchedEffect(isGoToLoginClicked) {
-        if(isGoToLoginClicked) {
-            handlers.onNavigateToLogin()
-        }
-    }
     Row(
         modifier = Modifier
             .background(Color.White)
             .fillMaxWidth()
             .statusBarsPadding()
-            .clickable(enabled = !isGoToLoginClicked) {
-                if(!isGoToLoginClicked) {
-                    isGoToLoginClicked = true
-                }
-
+            .clickable {
+                handlers.onNavigateToLogin()
             }
             .padding(top = 60.dp, bottom = 60.dp, start = 20.dp, end = 20.dp),
         verticalAlignment = Alignment.CenterVertically,
