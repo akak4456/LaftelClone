@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.jo.feature)
+    alias(libs.plugins.jo.hilt)
 }
 
 android {

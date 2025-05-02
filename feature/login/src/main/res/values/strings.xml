@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_login_big_title">동시방영 신작부터\n역대 인기작까지</string>
+    <string name="feature_login_small_title">애니메이션을 한 곳에서 편-안하게 즐기세요!</string>
+    <string name="feature_login_start_email">이메일로 시작하기</string>
+</resources>

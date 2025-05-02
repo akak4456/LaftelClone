@@ -13,9 +13,6 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="logoImage_exist()">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="bottomNavigationItems_areDisplayed()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
